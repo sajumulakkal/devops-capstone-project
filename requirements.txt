@@ -30,3 +30,6 @@ httpie==3.2.1
 
 # Tailsman
 Flask-Talisman==1.0.0
+
+#cors
+flask_cors=2.0.1
