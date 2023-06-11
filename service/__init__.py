@@ -12,7 +12,7 @@ from flask_talisman import Talisman
 from flask_cors import CORS
 
 # Create Flask application
-Flask.logger_name  = "listlogger"
+Flask.logger_name = "listlogger"
 app = Flask(__name__)
 app.config.from_object(config)
 CORS(app)
