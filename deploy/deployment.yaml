@@ -51,3 +51,10 @@ spec:
               secretKeyRef:
                 name: postgresql
                 key: database-user
+	
+spec:
+  template:
+    spec:
+      containers:
+      - image: sha256:c1958d5e968eccfe14156c5706566d9af42911eefdd12c990745fb9e71230a9aimage-registry.openshift-image-registry.svc:5000/sn-labs-sajumulakkal/accounts:1
+        name: accounts
