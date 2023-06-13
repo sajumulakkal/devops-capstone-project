@@ -7,16 +7,6 @@ metadata:
   name: accounts
 spec:
   replicas: 3
-(venv) theia:deploy$ cat deployment.yaml 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  creationTimestamp: null
-  labels:
-    app: accounts
-  name: accounts
-spec:
-  replicas: 3
   selector:
     matchLabels:
       app: accounts
@@ -51,3 +41,9 @@ spec:
               secretKeyRef:
                 name: postgresql
                 key: database-user
+spec:
+  template:
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/sn-labs-sajumulakkal/accounts:1
+        name: accounts
